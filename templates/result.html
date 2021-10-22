@@ -23,7 +23,7 @@
 		<!-- Result -->
 		<div class="results">
 			{% if prediction==-1 %}
-				<h1>Please enter a review!<span class='safe'>Try again.</span></h1>
+				<h1>Please enter a review! <span class='safe'>Try again.</span></h1>
 			{% elif prediction==1 %}
 				<h1>Prediction: <span class='safe'>Great! This is a POSITIVE Review.</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='positive-review.webp') }}" alt="Positive Review">
