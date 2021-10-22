@@ -14,6 +14,7 @@ def home():
 def predict():
     if request.method == 'POST':
         message = request.form.get('message')
+        print(message)
         if not message:
             data = [message]
             vect = cv.transform(data).toarray()
