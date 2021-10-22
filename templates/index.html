@@ -6,7 +6,7 @@
         <title>Restaurant Review - Sentiment Analyser</title>
         <link rel="shortcut icon" href="{{ url_for('static', filename='food-favicon.ico') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-        <!--<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>-->
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
     </head>
 
@@ -23,13 +23,13 @@
         <!-- Text Area -->
     	<div class="ml-container">
     		<form action="{{ url_for('predict') }}" method="POST">
-        		<textarea class='message-box' id= "input_text_area" onekeyup = "notempty()" name="message" rows="15" cols="75" placeholder="Enter Your Review Here..."></textarea><br/>
+        		<textarea id= "input_text_area" onekeyup ="notempty()" name="message" rows="15" cols="75" placeholder="Enter Your Review Here..."></textarea><br/>
         		<input type="submit" id="send_request" value="Predict" disabled>
         	</form>
     	</div>
         <script type="text/javascript">
             function notempty() {
-                if(document.getElementById("input_text_area").value==="") { 
+                if(!document.getElementById("input_text_area").value.length) { 
                     document.getElementById('send_request').disabled = true; 
                 } else { 
                     document.getElementById('send_request').disabled = false;
