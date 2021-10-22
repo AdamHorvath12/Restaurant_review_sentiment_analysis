@@ -29,6 +29,7 @@
     	</div>
         <script type="text/javascript">
             function notempty() {
+                print(document.getElementById("input_text_area").value)
                 if(!document.getElementById("input_text_area").value.length) { 
                     document.getElementById('send_request').disabled = true; 
                 } else { 
