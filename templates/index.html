@@ -27,6 +27,15 @@
         		<input type="submit" id="send_request" value="Predict" disabled>
         	</form>
     	</div>
+        <script type="text/javascript">
+            function notempty() {
+                if(document.getElementById("input_text_area").value==="") { 
+                    document.getElementById('send_request').disabled = true; 
+                } else { 
+                    document.getElementById('send_request').disabled = false;
+                }
+            }
+        </script>
 
         <!-- Footer -->
         <div class='footer'>
@@ -39,12 +48,4 @@
     </body>
 </html>
 
-<script type="text/javascript">
-    function notempty() {
-	 if(document.getElementById("input_text_area").value==="") { 
-            document.getElementById('send_request').disabled = true; 
-        } else { 
-            document.getElementById('send_request').disabled = false;
-        }
-    }
-</script>
+
