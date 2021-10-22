@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 
+
 filename = 'restaurant-sentiment-mnb-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 cv = pickle.load(open('cv-transform.pkl','rb'))
